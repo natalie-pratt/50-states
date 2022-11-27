@@ -3,8 +3,18 @@
         <span class="state-name">{{state.name}}</span>
 
         <div>
-            <input class="visit-state" type="checkbox" v-model="visited" v-on:change="visitedChanged">
+            <input class="visit-state" 
+                type="checkbox" 
+                v-model="visited" 
+                v-on:change="visitedChanged">
         </div>
+
+        <div>
+            <router-link v-bind:to="{name: 'StateMap', params: {state: state.name}}">
+                <img class="map-icon" src="@/assets/MapIcon.png">
+            </router-link>
+        </div>
+
     </div>
 </template>
 
@@ -44,6 +54,11 @@ export default{
 .visit-state {
     margin: 1rem;
     text-align: center;
+}
+
+.map-icon {
+    height: 45px;
+    width: auto;
 }
 
 </style>
