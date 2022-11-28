@@ -9,9 +9,16 @@ export default {
         })
     },
     setVisited(stateName, visited) {
+        // Update the visited value based off checkbox in StateDetail
         let requestData = {visited: visited}
         return axios.patch('/api/states/' + stateName, requestData)
         .then(response => {
+            return response.data
+        })
+    },
+    getOneState(stateName) {
+        // Get data on one state
+        return axios.get('/api/state/' + stateName).then(response => {
             return response.data
         })
     }

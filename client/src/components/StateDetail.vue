@@ -57,8 +57,8 @@ export default{
 }
 
 .map-icon {
-    height: 45px;
-    width: auto;
+    height: 2rem;
+    width: 2rem;
 }
 
 </style>

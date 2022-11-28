@@ -1,7 +1,6 @@
 <template>
   <div>
     <page-header></page-header>
-    <p>TODO - app content</p>
     <router-view></router-view>
     <page-footer></page-footer>
   </div>

@@ -13,6 +13,20 @@ router.get('/states', function(req, res, next) {
     .catch(err => next(err)) // Any errors found, let error handler deal with them
 })
 
+// Returns all info on one state
+router.get('/state/:name', function(req, res, name) {
+    let stateName = req.params.name
+    States.findOne({where: {name: stateName}})
+        .then(state => {
+            if (state) {
+                return res.json(state)
+            } else {
+                return res.status(404).send('State not found')
+            }
+        })
+        .catch(err => next(err))
+})
+
 // Update database to change value of 'visited' checkbox
 router.patch('/states/:name', function(req, res, next) {
     let stateName = req.params.name
@@ -20,7 +34,7 @@ router.patch('/states/:name', function(req, res, next) {
 
     // Update visited value where state name equals name requested
     States.update({visited: stateVisited}, {where: {name: stateName}})
-        .then(rowsUpdated => {
+         .then(rowsUpdated => {
             let numberOfRowsUpdated = rowsUpdated[0] // Determine whethere any rows were updated
             if (numberOfRowsUpdated == 1) {
                 return res.send('Success')
