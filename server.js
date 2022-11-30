@@ -1,7 +1,11 @@
 let express = require('express')
 let states_api = require('./routes/states')
+let path = require('path')
 
 let app = express()
+
+let vueAppPath = path.join(__dirname, 'client', 'dist')
+app.use(express.static(vueAppPath))
 
 app.use(express.json())
 
