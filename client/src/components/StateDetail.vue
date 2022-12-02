@@ -20,7 +20,7 @@
 
 <script>
 
-export default{
+export default {
     name: 'StateDetail',
     emits: ['update-visited'],
     props: {

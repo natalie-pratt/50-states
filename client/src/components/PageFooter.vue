@@ -7,8 +7,12 @@
                 <router-link to='/'>Home</router-link>
             </span>
 
-            <span id="nav-link">
+            <span class="nav-link">
                 <router-link to='/about'>About this site</router-link>
+            </span>
+
+            <span class="nav-link">
+                <router-link to='/visited'>States visited</router-link>
             </span>
 
         </div>

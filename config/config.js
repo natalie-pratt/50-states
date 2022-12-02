@@ -4,10 +4,10 @@ module.exports = {
     "dialect": "sqlite"
   },
   "production": {
-    "username": "YOUR_USERNAME",
+    "username": "Natalie",
     "password": process.env.DB_PASSWORD,
-    "database": "YOUR_DATABASE",
-    "host": "YOUR_DATABASE_SERVER.database.windows.net",
+    "database": "fifty-states-visited-database",
+    "host": "fifty-states-visited-database-server-natalie.database.windows.net",
     "dialect": "mssql"
   }
 }

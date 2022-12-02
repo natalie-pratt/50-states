@@ -32,7 +32,7 @@ export default{
     },
     components: {
         StateDetail,
-        StateSummary
+        StateSummary,
     },
     mounted() {
         this.fetchAllStates()
