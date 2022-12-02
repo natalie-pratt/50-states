@@ -44,4 +44,14 @@ router.patch('/states/:name', function(req, res, next) {
         .catch(err => next(err)) // Any server errors will be passed to error handler
 })
 
+// Get all states where visited = true
+router.get('/states/visited', function(req, res, next) {
+    States.findAll({where: {visited: true}})
+        .then(visitedStates => {
+            return res.json(visitedStates)
+    })        
+    .catch(err => next(err))
+
+})
+
 module.exports = router

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>You have visited:</h2>
+        <h2>States you have visited:</h2>
         <div id="visited-states-list" v-for="state in visitedStates" v-bind:key="state">
             <p>{{state.name}}</p>
         </div>
