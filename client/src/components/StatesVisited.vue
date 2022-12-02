@@ -1,8 +1,8 @@
 <template>
     <div>
         <h2>States you have visited:</h2>
-        <div id="visited-states-list" v-for="state in visitedStates" v-bind:key="state">
-            <p>{{state.name}}</p>
+        <div v-for="state in visitedStates" v-bind:key="state">
+            <p class="visited-states-list">{{state.name}}</p>
         </div>
     </div>
 </template>
@@ -29,3 +29,13 @@ export default {
 }
 
 </script>
+
+<style scoped>
+
+.visited-states-list {
+    color: darkcyan;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+</style>

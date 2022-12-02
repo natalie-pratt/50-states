@@ -4,27 +4,27 @@
         <div id="navigation-links">
 
             <span class="nav-link">
-                <router-link to='/'>Home</router-link>
+                <router-link class="link" to='/'>Home</router-link>
             </span>
 
             <span class="nav-link">
-                <router-link to='/about'>About this site</router-link>
+                <router-link class="link" to='/about'>About this site</router-link>
             </span>
 
             <span class="nav-link">
-                <router-link to='/visited'>States visited</router-link>
+                <router-link class="link" to='/visited'>States visited</router-link>
             </span>
 
         </div>
 
         <p>Header image by 
-            <a href="https://unsplash.com/photos/KpBXAOs80YI">
+            <a class="link" href="https://unsplash.com/photos/KpBXAOs80YI">
             @chrislawton on unsplash</a>
         </p>
 
-        <p><a target="_blank" 
+        <p><a class="link" target="_blank"
         href="https://icons8.com/icon/43632/map">
-        Map</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        Map</a> icon by <a target="_blank" href="https://icons8.com" class="link">Icons8</a></p>
 
     </div>
 </template>
@@ -45,6 +45,14 @@
 
     .nav-link {
         margin: 1rem;
+    }
+
+    .link {
+        color: darkcyan;
+    }
+
+    .link:visited {
+        color: darkgreen;
     }
 
 </style>
